@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/0dysseas/webpack_playground/issues"
   },
-  "homepage": "https://github.com/0dysseas/webpack_playground#readme"
+  "homepage": "https://github.com/0dysseas/webpack_playground#readme",
+  "devDependencies": {
+    "webpack": "^4.1.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
 }
