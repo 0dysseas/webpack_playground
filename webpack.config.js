@@ -1,5 +1,6 @@
  
  const path = require('path');
+ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
@@ -17,5 +18,23 @@ module.exports = {
 		port: 12000,
 		compress: true
 	},
-	devtool: 'inline-source-map'
+	module:{
+		rules:[
+		 {
+			test: /\.js$/,
+			include: /src/,
+			exclude: /node_modules/,
+			use:{
+				loader:'babel-loader',
+				options:{
+					presets: ['env']
+				}
+			}
+		  } 
+		]
+	}
+	devtool: 'inline-source-map',
+	plugins : [
+		new CleanWebpackPlugin(['dist'])
+	]
 }
