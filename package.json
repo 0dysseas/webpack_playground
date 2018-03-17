@@ -4,7 +4,10 @@
   "description": "testing out webpack",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "build:prod": "webpack -p",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,8 @@
   "homepage": "https://github.com/0dysseas/webpack_playground#readme",
   "devDependencies": {
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12"
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
     "lodash": "^4.17.5"
